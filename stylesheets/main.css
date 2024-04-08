@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+  body {
+    background: #F5F5F5;
+  }
+
+  .fullBody {
+    width: 100%;
+  }
+
+  .astronaut {
+     width: 50%;
+  }
+  
+  .nasaFrame {
+    top: 13.625rem;
+    left: 9.5rem;
+    border-radius: 50%;
+    width: 11.9375rem;
+    height: 11.0625rem;
+  }
+
+  .nasaImage {
+    width: 11.9375rem;
+    height: 11.0625rem;  
+    border-radius: 50%;
+  }
+
+  
