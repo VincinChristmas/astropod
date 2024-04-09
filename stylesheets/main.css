@@ -17,26 +17,33 @@
     background: #F5F5F5;
   }
 
-  .fullBody {
-    width: 100%;
-  }
+
 
   .astronaut {
-     width: 50%;
+     width: 40%;
+     position: relative;
   }
   
   .nasaFrame {
-    top: 13.625rem;
-    left: 9.5rem;
-    border-radius: 50%;
-    width: 11.9375rem;
-    height: 11.0625rem;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+  
   }
 
   .nasaImage {
+    position: absolute;
+    z-index: 2;
+    right: 56rem;
+    top: 1.743rem;
     width: 11.9375rem;
-    height: 11.0625rem;  
+    max-width: 100%;
+    height: 11.0625rem; 
     border-radius: 50%;
   }
+
+  
+
+  
 
   
