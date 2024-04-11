@@ -17,29 +17,47 @@
     background: #F5F5F5;
   }
 
-  
-
-  .astronaut {
-    width: 500px;
+  h1 {
+    float: left;
+    width: 50%
   }
 
-  .nasaImage {
-    top: 36px;
-    left: 146px;
-    width: 191px;
-    height: 177px; 
-    border-radius: 50%;
+  .radioBlock {
+    float: right;
+    background: rgb(228, 228, 7);
+    width: 40%;
   }
 
-  h3 {
-    font-family: "Exo 2", sans-serif;;
-    color: #564c3a;
-    width: 50%;
-    margin-left: 37rem;
-  }
 
-  
+  .nasaFrame {
+    float: left;
+    clear: both;
+    width: 60%;
+    position: relative;
+}
 
-  
+.astronaut {
+    width: 50%; 
+    height: auto;
+    display: block;
+}
+
+.nasaImage {
+    position: absolute;
+    top: 7.777%; 
+    left: 13.326%;
+    width: 22%; 
+    max-width: 100%;
+    clip-path: circle(48% at center); 
+}
+
+h3 {
+  clear: both;
+  float: right;
+  width: 40%;
+  font-family: "Exo 2", sans-serif;
+  color: #564c3a;
+}
+
 
   
