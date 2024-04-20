@@ -62,16 +62,52 @@
 
   .radioBlock {
     float: right;
-    background: rgb(228, 228, 7);
-    width: 20%;
+    width: 35%;
+    
   }
 
-   .radioStation {
-    margin-top: 30%;
-    margin-left: 15%;
-    color:#2562a7;
+   .radioStation, .stopPlaying {
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    margin-top: 9%;
+    padding: 4%;
+    width: 8rem; 
+    border-radius: 5%;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 700;
+    font-size: 1.632em;
+    transform: skewY(-12deg);
+    letter-spacing: 0.1rem;
     font-family: sans-serif;
+    transition: all .1s linear;
    }
+
+   .radioStation {
+    margin-right: 9%;
+    box-shadow: 0 5px 0 #006599;
+    background: rgb(244, 230, 76);
+    color: #006599;
+   }
+
+   .stopPlaying {
+    box-shadow: 0 5px 0 rgb(244, 230, 76);
+    background: rgba(244, 33, 33, 0.941);
+    color: rgb(244, 230, 76);
+    
+   }
+
+   .radioStation:active {
+    box-shadow: 0 2px 0 rgb(239, 166, 21);
+    transform: skewY(-12deg) translate(-5px);
+   }
+
+   .stopPlaying:active {
+    box-shadow: 0 2px 0 rgb(166, 239, 21);
+    transform: skewY(-12deg) translate(-5px);
+   }
+
+   
 
 
   .nasaFrame {

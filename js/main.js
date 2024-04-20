@@ -1,27 +1,61 @@
 //document.querySelector('button').addEventListener('click', getFetch)
 
+/**********THE RADIO***************
+ *                                *
+ *                                *
+ *                                *
+ *********************************/
+
+  let currentAudio = null
+  let currentAudioIndex = 0;
+  
+  //Math.floor(Math.random() * 4) 
+
+  
+  
+
+let radioStation = [
+  new Audio("music/Newspaper.mp3"),
+  new Audio("music/Lovely.mp3"),
+  new Audio("music/Confuso.mp3"),
+  new Audio("music/Star Guitar.mp3")
+  
+]
 
 function playMusic() {
-  const audio1 = new Audio("music/Confuso.mp3")
-  const audio2 = new Audio("music/Lovely.mp3")
-  const audio3 = new Audio("music/Star Guitar.mp3")
 
-  let stationNumber = Math.floor(Math.random() * 3) + 1
-  
-  switch (stationNumber) {
-    case 1:
-      audio1.play();
-      break;
-    case 2:
-      audio2.play();
-      break;
-    case 3:
-      audio3.play();
-      break;
-
+  if (currentAudio) {
+    currentAudio.removeEventListener('ended', playNextSong);
+    currentAudio.pause()
   }
- 
+
+  if (currentAudioIndex < radioStation.length) {
+    radioStation[currentAudioIndex].play()
+  } else {
+    console.log("end of track list")
+  }
+
 }
+
+function playNextSong() {
+  currentAudioIndex++
+  if(currentAudioIndex < radioStation.length) {
+    radioStation[currentAudioIndex].play()
+  }
+  else {
+    currentAudioIndex = (currentAudioIndex + 1) % radioStation.length;
+    playMusic()
+  }
+}
+
+radioStation[currentAudioIndex].addEventListener('ended', playNextSong);
+
+function stopMusic() {
+  if(radioStation[currentAudioIndex]) {
+    radioStation[currentAudioIndex].pause()
+  }
+}
+
 
 
 
