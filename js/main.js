@@ -7,9 +7,7 @@
  *********************************/
 
   let currentAudio = null
-  let currentAudioIndex = 0;
-  
-  //Math.floor(Math.random() * 4) 
+  let currentAudioIndex = Math.floor(Math.random() * 4) 
 
   
   
